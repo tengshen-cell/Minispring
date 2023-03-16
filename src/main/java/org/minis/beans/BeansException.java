@@ -6,9 +6,6 @@ package org.minis.beans;
  * @date 2023/3/15 14:19
  */
 public class BeansException extends Exception {
-    public BeansException() {
-        super();
-    }
     public BeansException(String msg) {
         super(msg);
     }

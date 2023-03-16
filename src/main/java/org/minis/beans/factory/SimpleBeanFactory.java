@@ -4,9 +4,7 @@ import org.minis.beans.BeanDefinition;
 import org.minis.beans.BeansException;
 import org.minis.beans.factory.support.DefaultSingletonBeanRegistry;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -20,7 +18,6 @@ public class SimpleBeanFactory extends DefaultSingletonBeanRegistry implements B
     private Map<String, Object> singletons = new HashMap<>();
 
     public SimpleBeanFactory() {
-
     }
 
     @Override
@@ -37,15 +34,13 @@ public class SimpleBeanFactory extends DefaultSingletonBeanRegistry implements B
             } catch (Exception e) {
 
             }
-
-    }
+        }
 
         return singleton;
-}
+    }
 
-    @Override
     public void registerBeanDefinition(BeanDefinition beanDefinition) {
-       this.beanDefinitions.put(beanDefinition.getId(), beanDefinition);
+        this.beanDefinitions.put(beanDefinition.getId(), beanDefinition);
     }
 
     public Boolean containBean(String name) {
