@@ -1,7 +1,7 @@
 package org.minis.beans.factory.xml;
 
 import org.dom4j.Element;
-import org.minis.beans.BeanDefinition;
+import org.minis.beans.factory.config.BeanDefinition;
 import org.minis.beans.factory.SimpleBeanFactory;
 import org.minis.core.Resource;
 
@@ -23,7 +23,7 @@ public class XmlBeanDefinitionReader {
             String beanID = element.attributeValue("id");
             String beanClassName = element.attributeValue("class");
             BeanDefinition beanDefinition = new BeanDefinition(beanID, beanClassName);
-            this.simpleBeanFactory.registerBeanDefinition(beanDefinition);
+            this.simpleBeanFactory.registerBeanDefinition(beanClassName, beanDefinition);
         }
     }
 }
